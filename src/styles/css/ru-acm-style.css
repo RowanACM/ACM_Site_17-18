@@ -1,0 +1,425 @@
+/*
+  (TEXT) PARAMS
+  =================
+  1. Namespace
+  2. Intensity
+  3. Text color
+  4. Background color (flat)
+  5. Highlight #1 color
+  6. Highlight #2 color
+  7. Width (px)
+  8. Height (px)
+*/
+body {
+  /*height: 100vh;//100% view height*/
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, #4285f4, #FCCD2F);
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.ru-acm-main-page-contents {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: start;
+  align-content: flex-start; }
+
+.ru-acm-main-page-display {
+  margin: 15px;
+  flex: 1 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+  align-content: flex-start; }
+
+.ru-acm-box {
+  flex: 1 300px; }
+
+.ru-acm-box-margin {
+  margin-bottom: 0px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.ru-acm-box-image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 180px;
+  width: auto;
+  height: auto; }
+
+.ru-acm-box-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.ru-acm-box-fill {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.ru-acm-box-selectable {
+  border-radius: 5px;
+  border-width: 1px;
+  border-bottom: 5px;
+  border-style: solid;
+  border-color: white;
+  transition: background-color 0.5s ease, border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease; }
+
+.ru-acm-box-selectable:hover {
+  background-color: #ffebd6;
+  border-color: #FCCD2F;
+  transform: translate(0px, -5px);
+  box-shadow: 0px 10px 15px -5px #888888; }
+
+.ru-acm-box-small {
+  width: 100%;
+  flex: 0 125px; }
+
+.ru-acm-box-big {
+  height: 260px; }
+
+.wide {
+  height: 300px;
+  flex: 1 600px; }
+
+.site-header {
+  padding: 0px;
+  margin-top: 10px;
+  font-size: 24px;
+  margin-bottom: -5px; }
+
+.ru-acm-main-page-announcements {
+  flex: 0 5%;
+  background: #4285f4;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #4285f4 97%, #60abf8 98%, #60abf8 99%, #4096ee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #4285f4 97%, #60abf8 98%, #60abf8 99%, #4096ee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #4285f4 97%, #60abf8 98%, #60abf8 99%, #4096ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /*transform: translate(-200px, 0px);*/
+  padding-right: 10px;
+  box-shadow: 0 0 15px 2px #00f; }
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box {
+  width: 50px;
+  transition: width 0.5s ease 0.4s; }
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box {
+  width: 300px;
+  transition: width 0.5s ease 0s; }
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box > .ru-acm-announcements-header {
+  width: 250px;
+  transform: rotate(90deg) translate(200px, 115px);
+  transition: transform 0.5s ease 0.3s, border-color 0.5s ease 0s;
+  font-size: 18px; }
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box > .ru-acm-announcements-header {
+  width: 250px;
+  border-color: #3278c8;
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 0.5s ease 0.1s, border-color 0.5s ease 0.5s; }
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box > .post-preview {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s; }
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box > .post-preview {
+  opacity: 1;
+  transition: opacity 0.25s ease 0.5s; }
+
+.ru-acm-announcements-box {
+  display: flex;
+  flex-flow: column;
+  height: 90vh;
+  align-items: stretch;
+  background-color: #4285f4; }
+
+.ru-acm-announcements-header {
+  flex: 0 50px;
+  font-size: 36;
+  font-family: 'Catamaran', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 0px;
+  border-bottom: 5px;
+  border-style: solid;
+  border-color: rgba(50, 120, 200, 0); }
+
+.ru-acm-header {
+  background-color: #4285f4 !important; }
+
+.ru-acm-logo-small {
+  margin-top: -5px;
+  height: 30px;
+  width: 30px;
+  content: url(../../img/logo_small.png);
+  display: block;
+  margin-bottom: -10px; }
+
+.ru-acm-navbar-options {
+  margin-bottom: -10px; }
+
+.ru-acm-navbar {
+  background: #4285f4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4285f4 91%, #60abf8 93%, #60abf8 93%, #4096ee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4285f4 91%, #60abf8 93%, #60abf8 93%, #4096ee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4285f4 91%, #60abf8 93%, #60abf8 93%, #4096ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4285f4', endColorstr='#4096ee',GradientType=0 );
+  /* IE6-9 */
+  border-width: 0px;
+  box-shadow: 0 0 15px 2px #00f;
+  padding-bottom: 10px; }
+
+.ru-acm-navbar-meetingTimes {
+  background-color: #222222;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-width: 2px;
+  border-right: 0px;
+  border-color: #888888;
+  border-style: solid;
+  margin: 0px;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: -15px;
+  height: 25px;
+  width: 450px;
+  color: #96ff5a;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 30px; }
+
+.ru-acm-navbar-meetingTimesTextGlitch {
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+  font-family: 'VT323', monospace;
+  color: #96ff5a;
+  position: relative; }
+@keyframes ru-acm-navbar-meetingTimesTextGlitch-anim-1 {
+  0% {
+    clip: rect(3px, 600px, 17px, 0); }
+  4% {
+    clip: rect(16px, 600px, 8px, 0); }
+  8% {
+    clip: rect(4px, 600px, 20px, 0); }
+  12% {
+    clip: rect(10px, 600px, 15px, 0); }
+  16% {
+    clip: rect(12px, 600px, 6px, 0); }
+  20% {
+    clip: rect(16px, 600px, 18px, 0); }
+  24% {
+    clip: rect(12px, 600px, 1px, 0); }
+  28% {
+    clip: rect(2px, 600px, 11px, 0); }
+  32% {
+    clip: rect(10px, 600px, 15px, 0); }
+  36% {
+    clip: rect(14px, 600px, 20px, 0); }
+  40% {
+    clip: rect(4px, 600px, 7px, 0); }
+  44% {
+    clip: rect(7px, 600px, 11px, 0); }
+  48% {
+    clip: rect(5px, 600px, 10px, 0); }
+  52% {
+    clip: rect(20px, 600px, 10px, 0); }
+  56% {
+    clip: rect(4px, 600px, 20px, 0); }
+  60% {
+    clip: rect(9px, 600px, 5px, 0); }
+  64% {
+    clip: rect(18px, 600px, 8px, 0); }
+  68% {
+    clip: rect(16px, 600px, 18px, 0); }
+  72% {
+    clip: rect(3px, 600px, 12px, 0); }
+  76% {
+    clip: rect(9px, 600px, 10px, 0); }
+  80% {
+    clip: rect(12px, 600px, 16px, 0); }
+  84% {
+    clip: rect(13px, 600px, 2px, 0); }
+  88% {
+    clip: rect(10px, 600px, 13px, 0); }
+  92% {
+    clip: rect(12px, 600px, 17px, 0); }
+  96% {
+    clip: rect(11px, 600px, 5px, 0); }
+  100% {
+    clip: rect(3px, 600px, 7px, 0); } }
+@keyframes ru-acm-navbar-meetingTimesTextGlitch-anim-2 {
+  0% {
+    clip: rect(5px, 600px, 11px, 0); }
+  4% {
+    clip: rect(18px, 600px, 1px, 0); }
+  8% {
+    clip: rect(13px, 600px, 12px, 0); }
+  12% {
+    clip: rect(4px, 600px, 12px, 0); }
+  16% {
+    clip: rect(13px, 600px, 15px, 0); }
+  20% {
+    clip: rect(6px, 600px, 13px, 0); }
+  24% {
+    clip: rect(15px, 600px, 3px, 0); }
+  28% {
+    clip: rect(7px, 600px, 7px, 0); }
+  32% {
+    clip: rect(12px, 600px, 18px, 0); }
+  36% {
+    clip: rect(3px, 600px, 1px, 0); }
+  40% {
+    clip: rect(6px, 600px, 7px, 0); }
+  44% {
+    clip: rect(4px, 600px, 5px, 0); }
+  48% {
+    clip: rect(5px, 600px, 11px, 0); }
+  52% {
+    clip: rect(1px, 600px, 8px, 0); }
+  56% {
+    clip: rect(10px, 600px, 15px, 0); }
+  60% {
+    clip: rect(17px, 600px, 6px, 0); }
+  64% {
+    clip: rect(4px, 600px, 2px, 0); }
+  68% {
+    clip: rect(1px, 600px, 18px, 0); }
+  72% {
+    clip: rect(17px, 600px, 2px, 0); }
+  76% {
+    clip: rect(17px, 600px, 12px, 0); }
+  80% {
+    clip: rect(18px, 600px, 12px, 0); }
+  84% {
+    clip: rect(12px, 600px, 10px, 0); }
+  88% {
+    clip: rect(9px, 600px, 13px, 0); }
+  92% {
+    clip: rect(6px, 600px, 7px, 0); }
+  96% {
+    clip: rect(19px, 600px, 4px, 0); }
+  100% {
+    clip: rect(20px, 600px, 17px, 0); } }
+  .ru-acm-navbar-meetingTimesTextGlitch > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  .ru-acm-navbar-meetingTimesTextGlitch:before, .ru-acm-navbar-meetingTimesTextGlitch:after {
+    content: attr(data-text);
+    font-style: "italic";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222222;
+    clip: rect(0, 0, 0, 0); }
+  .ru-acm-navbar-meetingTimesTextGlitch:after {
+    left: 2px;
+    text-shadow: -1px 0 blue;
+    animation: ru-acm-navbar-meetingTimesTextGlitch-anim-1 2s infinite linear alternate-reverse; }
+  .ru-acm-navbar-meetingTimesTextGlitch:before {
+    left: -2px;
+    text-shadow: 2px 0 red;
+    animation: ru-acm-navbar-meetingTimesTextGlitch-anim-2 3s infinite linear alternate-reverse; }
+
+.navbar-spacer {
+  height: 70px; }
+
+.navbar-default .navbar-nav > li > a, .navbar-header .navbar-text {
+  color: white; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-header > a:hover, .navbar-header > a:focus {
+  background: linear-gradient(to bottom, yellow, #FCCD2F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none; }
+
+.navbar-default {
+  font-family: 'Catamaran', sans-serif; }
+
+.post-preview {
+  flex: 1 50px;
+  margin-bottom: 5px;
+  transition: background-color 0.25s ease, border-color 0.1s ease;
+  background-color: #4285f4;
+  border-radius: 5px;
+  border-width: 0px;
+  border-bottom: 5px;
+  border-style: solid;
+  border-color: rgba(100, 180, 230, 0.5); }
+
+.post-preview:hover {
+  background-color: rgba(140, 200, 230, 0.5);
+  border-color: #FCCD2F;
+  text-decoration: none; }
+
+.post-preview:focus {
+  text-decoration: none; }
+
+.post-preview:focus > .post-text, .post-preview:hover > .post-text {
+  visibility: visible; }
+
+.post-title {
+  text-align: center;
+  font-size: 14px;
+  background: linear-gradient(to bottom, yellow, #FCCD2F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none; }
+
+.post-subtitle {
+  visibility: hidden;
+  height: 0px;
+  text-align: center; }
+
+.post-meta {
+  padding-right: 10px;
+  text-align: right;
+  /*color: #999999;*/
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.post-text {
+  height: 0px;
+  visibility: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 10px;
+  text-indent: 25px;
+  text-overflow: ellipsis; }
+
+.bubbleLink > .message {
+  text-align: center;
+  font-style: oblique;
+  font-size: 24px; }
+
+.bubbleLink > .note {
+  text-align: center;
+  text-indent: 15px; }
+
+/*# sourceMappingURL=ru-acm-style.css.map */

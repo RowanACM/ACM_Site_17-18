@@ -1,0 +1,336 @@
+@import 'glitch';
+
+//Until we use SASS for the site, here are some 'variables', lol
+
+//rowan acm blue: rgb(66, 133, 244)
+//rowan gold: #FCCD2F
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #222222;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ru-acm-main-page-contents {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: start;
+	align-items: start;
+	align-content: flex-start;
+}
+
+.ru-acm-main-page-display{
+	margin: 15px;
+	flex: 1 60%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: start;
+	align-content: flex-start;
+}
+
+.ru-acm-box {
+	flex: 1 300px;
+}
+
+.ru-acm-box-margin {
+	margin-bottom: 0px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.ru-acm-box-image {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 180px;
+	width: auto;
+	height: auto;
+}
+
+.ru-acm-box-container {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.ru-acm-box-fill {
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #222222;
+}
+
+.ru-acm-box-selectable {
+	border-radius: 5px;
+	border-width: 1px;
+	border-bottom: 5px;
+	border-style: solid;
+	border-color: rgba(100,255,100,1);
+	transition: background-color 0.5s ease, border-color 0.5s ease, border-width 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.ru-acm-box-selectable:hover {
+	background-color: rgba(100,200,150, 1);
+	border-color: #FCCD2F;
+	transform: translate(0px, -5px);
+	box-shadow: 0px 10px 15px -5px #888888;
+}
+
+.ru-acm-box-small {
+	width: 100%;
+	flex: 0 125px;
+}
+
+.ru-acm-box-big {
+	height: 260px;
+}
+
+.wide {
+	height: 300px;
+	flex: 1 600px;
+}
+
+.site-header {
+	padding: 0px;
+	margin-top: 10px;
+	font-size: 24px;
+	margin-bottom: -5px;
+}
+
+.ru-acm-main-page-announcements {
+	flex: 0 5%;
+	background: rgb(66,133,244); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(66,133,244,1) 97%, rgba(96,171,248,1) 98%, rgba(96,171,248,1) 99%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(66,133,244,1) 97%,rgba(96,171,248,1) 98%,rgba(96,171,248,1) 99%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(66,133,244,1) 97%,rgba(96,171,248,1) 98%,rgba(96,171,248,1) 99%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	padding-right: 10px;
+	box-shadow: 0 0 15px 2px #00f;
+}
+
+.ru-acm-main-page-announcements:hover {
+}
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box {
+	width: 50px;
+	transition: width 0.5s ease 1s;
+}
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box {
+	width: 300px;
+	transition: width 0.5s ease 0s;
+}
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box > .ru-acm-announcements-header {
+	width: 250px;
+	transform: rotate(90deg) translate(200px, 100px);
+	transition: transform 0.5s ease 0.5s;
+}
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box > .ru-acm-announcements-header {
+	width: 250px;
+	transform: rotate(0deg) translate(0px, 0px);
+	transition: transform 0.5s ease 0.5s;
+}
+
+.ru-acm-main-page-announcements > .ru-acm-announcements-box > .post-preview {
+	opacity: 0;
+	transition: opacity 0.5s ease 0s;
+}
+
+.ru-acm-main-page-announcements:hover > .ru-acm-announcements-box > .post-preview {
+	opacity: 1;
+	transition: opacity 0.25s ease 1s;
+}
+
+.ru-acm-announcements-box {
+	display: flex;
+	flex-flow: column;
+	height: 90vh;
+	align-items: stretch;
+	background-color: rgb(66, 133, 244);
+}
+
+.ru-acm-announcements-header {
+	flex: 0 50px;
+	font-size: 36;
+	font-family: 'Catamaran', sans-serif;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-width: 0px;
+	border-bottom: 5px; 
+	border-style: solid;
+	border-color: rgb(50,120,200);
+}
+
+.ru-acm-header {
+	background-color: rgb(66, 133, 244) !important;
+}
+
+.ru-acm-logo-small {
+	margin-top: -5px;
+	height: 30px;
+	width: 30px;
+	content: url(../../img/logo_small.png);
+	display: block;
+	margin-bottom: -10px;
+}
+
+.ru-acm-navbar-options {
+	margin-bottom: -10px;
+}
+
+.ru-acm-navbar {
+	background: rgb(66,133,244); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(66,133,244,1) 91%, rgba(96,171,248,1) 93%, rgba(96,171,248,1) 93%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(66,133,244,1) 91%,rgba(96,171,248,1) 93%,rgba(96,171,248,1) 93%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(66,133,244,1) 91%,rgba(96,171,248,1) 93%,rgba(96,171,248,1) 93%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4285f4', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+	border-width: 0px;
+	box-shadow: 0 0 15px 2px #00f;
+	padding-bottom:10px;
+}
+
+
+.ru-acm-navbar-meetingTimes {
+	background-color: #222222;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-width: 2px;
+	border-right: 0px;
+	border-color: #888888;
+	border-style: solid;
+	margin: 0px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: -15px;
+	height: 25px;
+	width: 450px;
+	color: rgb(150,255,90);
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 30px;
+}
+
+.ru-acm-navbar-meetingTimesTextGlitch {
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+  font-family: 'VT323', monospace;
+  @include textGlitch("ru-acm-navbar-meetingTimesTextGlitch", 25, rgb(150,255,90), #222222, blue, red, 600, 20);
+}
+
+.navbar-spacer {
+	height: 70px;
+}
+
+.navbar-default .navbar-nav > li > a , .navbar-header .navbar-text {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-header > a:hover, .navbar-header > a:focus {
+    background: linear-gradient(to bottom, yellow, #FCCD2F);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-decoration: none;
+}
+
+.navbar-default {
+	font-family: 'Catamaran', sans-serif;
+}
+
+.post-preview {
+	flex: 1 50px;
+	margin-bottom: 5px;
+	transition: background-color 0.25s ease, border-color 0.1s ease;
+	background-color: rgb(66, 133, 244);
+	border-radius: 5px;
+	border-width: 0px;
+	border-bottom: 5px;
+	border-style: solid;
+	border-color: rgba(100,180,230,0.5);
+}
+
+.post-preview:hover, {
+	background-color: rgba(140,200,230,0.5);
+	border-color: #FCCD2F;
+	text-decoration: none;
+}
+
+.post-preview:focus {
+	text-decoration: none;
+}
+
+.post-preview:focus > .post-text, .post-preview:hover > .post-text {
+	visibility: visible;
+}
+
+.post-title {
+	text-align: center;
+	font-size: 14px;
+	background: linear-gradient(to bottom, yellow, #FCCD2F);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-decoration: none;
+}
+
+.post-subtitle {
+	visibility: hidden;
+	height: 0px;
+	text-align: center;
+}
+
+.post-meta {
+	padding-right: 10px;
+	text-align: right;
+	color: white;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.post-text {
+	height: 0px;
+	visibility: hidden;
+	white-space: nowrap;
+  	overflow: hidden;
+	padding-left: 10px;
+	text-indent: 25px;
+	text-overflow: ellipsis;
+}
+
+@for $i from 1 through 3 {
+  	.ru-acm-box-selectable > .bubbleLink > .message.speed-#{$i} {
+		font-family: 'VT323', monospace;
+		@include textGlitch("bubbleLinkMessage1", 15 + $i * 4, rgb(150,255,90), #222222, blue, red, 300, 24);
+	}
+}
+
+.ru-acm-box-selectable:hover > .bubbleLink > .message:before, 
+.ru-acm-box-selectable:hover > .bubbleLink > .message:after,
+.ru-acm-box-selectable:hover > .bubbleLink > .note:before, 
+.ru-acm-box-selectable:hover > .bubbleLink > .note:after {
+	opacity: 0;
+	animation: none;
+}
+
+.bubbleLink > .message {
+	text-align: center;
+	font-style: oblique;
+	font-size: 24px;
+}
+
+.bubbleLink > .note {
+	text-align: center;
+	text-indent: 15px;
+}
