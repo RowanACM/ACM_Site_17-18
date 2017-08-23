@@ -24,7 +24,7 @@ class RowanACMNavbar extends Component {
                     <a href="attendance/index.html">Attendance</a> 
                   </li> 
                   <li> 
-                    <a href="committees.html">Committees</a> 
+                    <a href="/committees">Committees</a> 
                   </li> 
                   <li> 
                     <a href="eboard.html">Eboard</a> 
