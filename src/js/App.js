@@ -8,6 +8,7 @@ import Home from './Home.js';
 import Committees from './Committees.js';
 import Eboard from './Eboard.js';
 import Login from './Login.js';
+import Attendance from './Attendance.js';
 import {Switch, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path='/committees' component={Committees}/>
           <Route exact path='/eboard' component={Eboard}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/attendance' component={Attendance}/>
         </Switch>
       </div>
     );
