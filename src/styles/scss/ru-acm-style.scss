@@ -317,6 +317,15 @@ body {
 	text-overflow: ellipsis;
 }
 
+.bubbleLink{
+	display: block;
+	height: 100%;
+}
+
+.bubbleLink:hover {
+	text-decoration: none;
+}
+
 .bubbleLink > .message {
 	text-align: center;
 	font-style: oblique;
