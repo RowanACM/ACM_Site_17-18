@@ -33,7 +33,7 @@ class RowanACMNavbar extends Component {
                     <a href="https://rowanacm.slack.com/">Slack</a> 
                   </li> 
                   <li> 
-                    <a href="login.html">Login</a> 
+                    <a href="/login">Login</a> 
                   </li> 
                 </ul> 
               </div>
