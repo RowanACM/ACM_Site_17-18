@@ -27,7 +27,7 @@ class RowanACMNavbar extends Component {
                     <a href="/committees">Committees</a> 
                   </li> 
                   <li> 
-                    <a href="eboard.html">Eboard</a> 
+                    <a href="/eboard">Eboard</a> 
                   </li> 
                   <li> 
                     <a href="https://rowanacm.slack.com/">Slack</a> 

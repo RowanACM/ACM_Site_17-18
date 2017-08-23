@@ -6,6 +6,7 @@ import RowanAcmNavbar from './ru-acm-navbar.js';
 import NewsDisplay from './newsDisplay.js';
 import Home from './Home.js';
 import Committees from './Committees.js';
+import Eboard from './Eboard.js';
 import {Switch, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/committees' component={Committees}/>
+          <Route exact path='/eboard' component={Eboard}/>
         </Switch>
       </div>
     );
