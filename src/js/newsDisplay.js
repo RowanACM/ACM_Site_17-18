@@ -12,10 +12,10 @@ function NewsDisplay (props) {
 	        </div>
 	        <div className="ru-acm-box ru-acm-box-margin ru-acm-box-big ru-acm-box-container">
 	          <div className="ru-acm-box ru-acm-box-fill ru-acm-box-selectable ru-acm-box-small">
-	            <BubbleLink id="2" message="This year's committees" note="We have four sub-committees that specialize in different aspects of computer science. Interested?" />
+	            <BubbleLink route="/committees" message="This year's committees" note="We have four sub-committees that specialize in different aspects of computer science. Interested?" />
 	          </div>
 	          <div className="ru-acm-box ru-acm-box-fill ru-acm-box-selectable ru-acm-box-small">
-	            <BubbleLink id="3" message="Fall 2017 Eboard" note="See our new executive board members here!" />
+	            <BubbleLink route="/eboard" message="Fall 2017 Eboard" note="See our new executive board members here!" />
 	          </div>
 	        </div>
 	        <div className="ru-acm-box ru-acm-box-margin ru-acm-box-big ru-acm-box-container">
