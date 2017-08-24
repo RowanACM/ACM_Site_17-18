@@ -1,7 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import UserComponent from './userComponent.js';
 
-class RowanACMNavbar extends Component {
+class RowanACMNavbar extends UserComponent {
+
   render() {
+    const userNavItem = (this.state.isLoggedIn ?  
+                            <li> 
+                              <a href={"/members/" + this.state.user.uid}>{this.state.user.displayName}</a> 
+                            </li>
+                            :
+                            <li> 
+                              <a href="/login">Login</a> 
+                            </li>
+                        );
     return (
       <div id="navbarWrapper">
         <nav className="navbar navbar-default navbar-custom navbar-fixed-top ru-acm-navbar">
@@ -32,9 +43,7 @@ class RowanACMNavbar extends Component {
                   <li> 
                     <a href="https://rowanacm.slack.com/">Slack</a> 
                   </li> 
-                  <li> 
-                    <a href="/login">Login</a> 
-                  </li> 
+                  {userNavItem}
                 </ul> 
               </div>
               <div className="ru-acm-navbar-meetingTimes">
