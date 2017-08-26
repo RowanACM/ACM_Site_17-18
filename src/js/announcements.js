@@ -3,10 +3,9 @@ import firebase from './firebase.js';
 
 function Post (props) {
   const snapshot = props.snapshot;
-  console.log(snapshot);
   var d = new Date(Number(snapshot.timestamp) * 1000);
   return ( 
-    <a href={"#" + snapshot.key} className="post-preview">
+    <a href={"#announcement_" + props.announcementKey} className="post-preview">
       <h4 className="post-title">{snapshot.title}</h4>
       <p className="post-subtitle">{snapshot.subj}</p>
       <p className="post-text">{snapshot.text}</p>
@@ -42,7 +41,7 @@ class Announcements extends Component {
 
     var renderedAnnouncements = []
     this.state.announcements.forEach(function(childSnapshot) {
-      renderedAnnouncements.push(<Post snapshot={childSnapshot.val()} />);
+      renderedAnnouncements.push(<Post key={childSnapshot.key} announcementKey={childSnapshot.key} snapshot={childSnapshot.val()} />);
     });
 
     return (
