@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Announcements from './announcements.js';
 import NewsDisplay from './newsDisplay.js';
-import UserComponent from './userComponent.js';
 
-class Home extends UserComponent {
+class HomePage extends Component {
 
   render() {
-    if(this.state.isLoggedIn){
+    if(this.props.isLoggedIn){
       return (
         <div>
           <div className="ru-acm-main-page-contents">
@@ -29,4 +28,4 @@ class Home extends UserComponent {
   }
 }
 
-export default Home;
+export default HomePage;
