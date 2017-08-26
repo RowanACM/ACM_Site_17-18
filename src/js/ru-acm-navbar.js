@@ -1,12 +1,15 @@
-import React from 'react';
-import UserComponent from './userComponent.js';
+import React, {Component} from 'react';
 
-class RowanACMNavbar extends UserComponent {
+class RowanACMNavbar extends Component {
 
+  //{"/members/" + this.props.user.uid}
   render() {
-    const userNavItem = (this.state.isLoggedIn ?  
-                            <li> 
-                              <a href={"/members/" + this.state.user.uid}>{this.state.user.displayName}</a> 
+    const userNavItems = (this.props.isLoggedIn ?  
+                            <li className="dropdown">
+                                <a href="#" data-toggle="dropdown" className="dropdown-toggle">{this.props.user.displayName}<b className="caret"></b></a>
+                                <ul className="dropdown-menu">
+                                    <li><a href="/signout">Sign Out</a></li>
+                                </ul>
                             </li>
                             :
                             <li> 
@@ -18,7 +21,7 @@ class RowanACMNavbar extends UserComponent {
         <nav className="navbar navbar-default navbar-custom navbar-fixed-top ru-acm-navbar">
           <div id="navContainer" className="container-fluid">
             <div className="navbar-header page-scroll"> 
-              <span className="navbar-brand"><a className="ru-acm-logo-small" href="index.html"></a></span>
+              <span className="navbar-brand"><a className="ru-acm-logo-small" href="index.html">Rowan ACM</a></span>
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
                 <span className="sr-only">Toggle navigation</span> 
                 Menu <i className="fa fa-bars"></i> 
@@ -43,7 +46,7 @@ class RowanACMNavbar extends UserComponent {
                   <li> 
                     <a href="https://rowanacm.slack.com/">Slack</a> 
                   </li> 
-                  {userNavItem}
+                  {userNavItems}
                 </ul> 
               </div>
               <div className="ru-acm-navbar-meetingTimes">
