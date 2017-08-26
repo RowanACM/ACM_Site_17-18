@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 function BubbleLink(props) {
 	return (
@@ -8,5 +8,4 @@ function BubbleLink(props) {
 		</a>
 	);
 }
-
 export default BubbleLink;
