@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../vendor/bootstrap/css/bootstrap.min.css';
-import '../styles/css/ru-acm-style.css';
+//import '../vendor/bootstrap/css/bootstrap.min.css';
+//import '../styles/css/ru-acm-style.css';
 import firebase from './firebase.js';
 import RowanAcmNavbar from './ru-acm-navbar.js';
 import HomePage from './HomePage.js';
