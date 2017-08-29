@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class RowanACMNavbar extends Component {
 
-  //{"/members/" + this.props.user.uid}
   render() {
     const userNavItems = (this.props.isLoggedIn ?  
                             <li className="dropdown">
@@ -16,48 +15,32 @@ class RowanACMNavbar extends Component {
                               <a href="/login">Login</a> 
                             </li>
                         );
+    const navEntries = [
+        <a className="mdl-navigation__link" href="/">Home</a>, 
+        <a className="mdl-navigation__link" href="/attendance">Attendance</a>,
+        <a className="mdl-navigation__link" href="/committees">Committees</a>,
+        <a className="mdl-navigation__link" href="/eboard">Eboard</a>,
+      ];
     return (
-      <div id="navbarWrapper">
-        <nav className="navbar navbar-default navbar-custom navbar-fixed-top ru-acm-navbar">
-          <div id="navContainer" className="container-fluid">
-            <div className="navbar-header page-scroll"> 
-              <span className="navbar-brand"><a className="ru-acm-logo-small" href="index.html">Rowan ACM</a></span>
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
-                <span className="sr-only">Toggle navigation</span> 
-                Menu <i className="fa fa-bars"></i> 
-              </button> 
-              <span className="navbar-text site-header">Rowan ACM</span>
-            </div> 
-            <div>
-              <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse ru-acm-navbar-options"> 
-                <ul className="nav navbar-nav navbar-right"> 
-                  <li> 
-                    <a href="/">Home</a> 
-                  </li> 
-                  <li> 
-                    <a href="/attendance">Attendance</a> 
-                  </li> 
-                  <li> 
-                    <a href="/committees">Committees</a> 
-                  </li> 
-                  <li> 
-                    <a href="/eboard">Eboard</a> 
-                  </li> 
-                  <li> 
-                    <a href="https://rowanacm.slack.com/">Slack</a> 
-                  </li> 
-                  {userNavItems}
-                </ul> 
-              </div>
-              <div className="ru-acm-navbar-meetingTimes">
-                <div className="ru-acm-navbar-meetingTimesTextGlitch" data-text="Meetings every Friday from 2-4pm in Robinson 201 (A && B)">
-                  <span> Meetings every Friday from 2-4pm in Robinson 201 (A && B) </span>
-                </div>
-              </div>
-            </div>
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header className="mdl-layout__header">
+          <div className="mdl-layout__header-row">
+            <span className="mdl-layout-title">Title</span>
+            <div className="mdl-layout-spacer"></div>
+            <nav className="mdl-navigation mdl-layout--large-screen-only">
+              {navEntries}
+            </nav>
           </div>
-        </nav>
-        <div className="navbar-spacer" />
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Title</span>
+          <nav class="mdl-navigation">
+            {navEntries}
+          </nav>
+          <main class="mdl-layout__content">
+            <div class="page-content"></div>
+          </main>
+        </div>
       </div>
     );
   }
