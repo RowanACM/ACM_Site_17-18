@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import '../vendor/bootstrap/css/bootstrap.min.css';
 //import '../styles/css/ru-acm-style.css';
 import firebase from './firebase.js';
-import RowanAcmNavbar from './ru-acm-navbar.js';
+import RowanAcmNavbar from './ru-acm-navbar.jsx';
 import HomePage from './HomePage.js';
 import CommitteesPage from './CommitteesPage.js';
 import EboardPage from './EboardPage.js';
