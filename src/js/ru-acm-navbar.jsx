@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 
-class RowanACMNavbar extends Component {
+
+class RowanACMNavbar extends React.Component  {
+    constructor(props) {
+        super(props)
+    }
+
+    componentWillMount() {
+       // called when rendered
+    }
 
   render() {
     const userNavItems = (this.props.isLoggedIn ?  
@@ -21,27 +29,31 @@ class RowanACMNavbar extends Component {
         <a className="mdl-navigation__link" href="/committees">Committees</a>,
         <a className="mdl-navigation__link" href="/eboard">Eboard</a>,
       ];
+    const title = 'Rowan ACM';
+    const logoStyle = {
+        width:"50px",
+        height:"50px"
+    };
+
     return (
-      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header className="mdl-layout__header">
-          <div className="mdl-layout__header-row">
-            <span className="mdl-layout-title">Title</span>
-            <div className="mdl-layout-spacer"></div>
-            <nav className="mdl-navigation mdl-layout--large-screen-only">
-              {navEntries}
-            </nav>
-          </div>
-        </header>
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Title</span>
-          <nav class="mdl-navigation">
-            {navEntries}
-          </nav>
-          <main class="mdl-layout__content">
-            <div class="page-content"></div>
-          </main>
+
+        <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header className="mdl-layout__header">
+                <div className="mdl-layout-icon"></div>
+                <div className="mdl-layout__header-row">
+                    <span className="mdl-layout-title">{title}</span>
+                    <div className="mdl-layout-spacer"></div>
+                    <nav className="mdl-navigation mdl-layout--large-screen-only">
+                        {navEntries}
+                    </nav>
+                </div>
+            </header>
+            <div className="mdl-layout__drawer mdl-layout--small-screen-only">
+                <nav className="mdl-navigation">
+                    {navEntries}
+                </nav>
+            </div>
         </div>
-      </div>
     );
   }
 }
