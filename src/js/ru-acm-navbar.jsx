@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import logo from '../img/logo_small.png';
-import dragonImage from '../img/dragon.jpg';
+
 
 class RowanACMNavbar extends React.Component  {
     constructor(props) {
