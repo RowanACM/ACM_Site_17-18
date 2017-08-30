@@ -34,12 +34,10 @@ class RowanACMNavbar extends React.Component  {
         width:"50px",
         height:"50px"
     };
-    const navStyle = {
-        width:"400%"
-    }
+
     return (
 
-        <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header" style={navStyle}>
+        <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header className="mdl-layout__header">
                 <div className="mdl-layout-icon"></div>
                 <div className="mdl-layout__header-row">
