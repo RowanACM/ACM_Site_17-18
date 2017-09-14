@@ -88,10 +88,7 @@ class App extends Component {
     );
 
     return (
-      <div>
-        <RowanAcmNavbar isLoggedIn= {this.state.isLoggedIn} user={this.state.user} />
-        {pageContent}
-      </div>
+        <RowanAcmNavbar isLoggedIn= {this.state.isLoggedIn} user={this.state.user} mainContent={pageContent}/>
     );
   }
 }

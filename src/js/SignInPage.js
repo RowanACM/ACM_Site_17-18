@@ -25,9 +25,13 @@ class SignInPage extends Component{
 
 	render () {
 		return (
-			<div className="signinPage">
-				<h className="signin-header">Sign in with your Google Account</h>
-				<div className="signin-button g-signin2" onClick={this.startSignInPopup}/>
+			<div className="mdl-grid">
+				<div className="mdl-layout-spacer"/>
+				<h className="mdl-cell mdl-cell--4-col mdl-layout-title">Sign in with your Google Account</h>
+				<div className="mdl-layout-spacer"/>
+				<div className="mdl-layout-spacer"/>
+				<div className="centered mdl-cell mdl-cell--4-col g-signin2" onClick={this.startSignInPopup}/>
+				<div className="mdl-layout-spacer"/>
 			</div>
 		);
 	}

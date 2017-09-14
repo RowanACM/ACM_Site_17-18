@@ -5,12 +5,14 @@ function Post (props) {
   const snapshot = props.snapshot;
   var d = new Date(Number(snapshot.timestamp) * 1000);
   return ( 
-    <a href={"#announcement_" + props.announcementKey} className="post-preview">
-      <h4 className="post-title">{snapshot.title}</h4>
-      <p className="post-subtitle">{snapshot.subj}</p>
-      <p className="post-text">{snapshot.text}</p>
-      <p className="post-meta">Posted in {snapshot.committee} on {d.toDateString()}</p>
-    </a>
+    <li className="mdl-list__item mdl-list__item--three-line" href={"#announcement_" + props.announcementKey}>
+      <span className="mdl-list__item-primary-content">
+        <span>{snapshot.title}</span>
+        
+        <span className="mdl-list__item-sub-title">{snapshot.subj}</span>
+        <span className="mdl-list__item-text-body">{snapshot.text}</span>     
+      </span>
+    </li>
   );
 }
 
@@ -45,11 +47,13 @@ class Announcements extends Component {
     });
 
     return (
-      <div id="announcementsBox" className="ru-acm-announcements-box">
-        <div className="ru-acm-announcements-header">
-          Announcements!
+      <div>
+        <div className="mdl-layout-title">
+          Announcements
         </div>
-        {renderedAnnouncements}
+        <ul className="mdl-list">
+          {renderedAnnouncements}
+        </ul>
       </div>
     );
   }
