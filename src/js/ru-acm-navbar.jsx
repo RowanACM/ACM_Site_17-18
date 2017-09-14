@@ -46,6 +46,9 @@ class RowanACMNavbar extends React.Component  {
                     {navEntries}
                 </nav>
             </div>
+            <main className="mdl-layout__content">
+                <div className="page-content">{this.props.mainContent}</div>
+            </main>
         </div>
     );
   }
