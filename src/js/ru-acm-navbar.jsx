@@ -11,24 +11,17 @@ class RowanACMNavbar extends React.Component  {
     }
 
   render() {
-    const userNavItems = (this.props.isLoggedIn ?  
-                            <li className="dropdown">
-                                <a href="#" data-toggle="dropdown" className="dropdown-toggle">{this.props.user.displayName}<b className="caret"></b></a>
-                                <ul className="dropdown-menu">
-                                    <li><a href="/signout">Sign Out</a></li>
-                                </ul>
-                            </li>
-                            :
-                            <li> 
-                              <a href="/login">Login</a> 
-                            </li>
-                        );
     const navEntries = [
         <a className="mdl-navigation__link" href="/">Home</a>, 
         <a className="mdl-navigation__link" href="/attendance">Attendance</a>,
         <a className="mdl-navigation__link" href="/committees">Committees</a>,
         <a className="mdl-navigation__link" href="/eboard">Eboard</a>,
       ];
+    if(this.props.isLoggedIn) {
+        navEntries.push(<a className="mdl-navigation__link" href="/signout">Sign Out</a>);
+    } else {
+        navEntries.push(<a className="mdl-navigation__link" href="/signin">Sign In</a>);
+    }
     const title = 'Rowan ACM';
     const logoStyle = {
         width:"50px",
