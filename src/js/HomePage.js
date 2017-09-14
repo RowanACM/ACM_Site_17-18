@@ -7,22 +7,11 @@ class HomePage extends Component {
   render() {
     if(this.props.isLoggedIn){
       return (
-        <div>
-          <div className="ru-acm-main-page-contents">
-            <div className="ru-acm-main-page-announcements">
-              <Announcements />
-            </div>
-            <NewsDisplay />
-          </div>
-        </div>
+        <Announcements />
       );
     } else {
       return (
-        <div>
-          <div className="ru-acm-main-page-contents">
-            <NewsDisplay />
-          </div>
-        </div>
+        <NewsDisplay />
       );
     }
   }
