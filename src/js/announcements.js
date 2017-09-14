@@ -8,7 +8,6 @@ function Post (props) {
     <li className="mdl-list__item mdl-list__item--three-line" href={"#announcement_" + props.announcementKey}>
       <span className="mdl-list__item-primary-content">
         <span>{snapshot.title}</span>
-        
         <span className="mdl-list__item-sub-title">{snapshot.subj}</span>
         <span className="mdl-list__item-text-body">{snapshot.text}</span>     
       </span>

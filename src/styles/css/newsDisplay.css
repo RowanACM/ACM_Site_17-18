@@ -1,0 +1,52 @@
+/*Images section*/
+.fall-meetings-image {
+  background: url("../../img/meeting.jpg") center/cover; }
+
+/* End images section */
+.image-card.mdl-card {
+  height: 256px;
+  /*background: url('../assets/demos/image_card.jpg') center / cover;*/ }
+
+.mdl-card {
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  max-width: 500px; }
+
+.image-card > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2); }
+
+.image-card__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500; }
+
+.text-link-card.mdl-card {
+  height: 128px;
+  background: #3E4EB8; }
+
+.text-link-card > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2); }
+
+.text-link-card > .mdl-card__title {
+  align-items: flex-start; }
+
+.text-link-card > .mdl-card__title > h4 {
+  margin-top: 0; }
+
+.text-link-card > .mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center; }
+
+.text-link-card > .mdl-card__actions > .material-icons {
+  padding-right: 10px; }
+
+.text-link-card > .mdl-card__title,
+.text-link-card > .mdl-card__actions,
+.text-link-card > .mdl-card__actions > .mdl-button {
+  color: #fff; }
+
+/*# sourceMappingURL=newsDisplay.css.map */
