@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
+import style from '../styles/css/announcements.css';
 
 function Post (props) {
   const snapshot = props.snapshot;
@@ -46,7 +47,7 @@ class Announcements extends Component {
     });
 
     return (
-      <div>
+      <div className="announcements-list">
         <div className="mdl-layout-title">
           Announcements
         </div>
