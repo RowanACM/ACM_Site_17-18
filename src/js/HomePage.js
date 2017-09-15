@@ -7,7 +7,10 @@ class HomePage extends Component {
   render() {
     if(this.props.isLoggedIn){
       return (
-        <Announcements />
+        <div>
+          <NewsDisplay />
+          <Announcements />
+        </div>
       );
     } else {
       return (
